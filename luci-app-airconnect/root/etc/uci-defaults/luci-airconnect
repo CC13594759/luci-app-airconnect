@@ -6,6 +6,6 @@ uci -q batch <<-EOF >/dev/null
 	set ucitrack.@airconnect[-1].init=airconnect
 	commit ucitrack
 EOF
-
+rm -rf /etc/init.d/cgroupfs-mount
 rm -rf /tmp/luci-indexcache*
 exit 0
